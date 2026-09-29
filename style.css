@@ -540,3 +540,7 @@ table.cmp tbody tr:nth-child(even){ background:var(--surface-alt); }
   textarea.input{ border:1px solid #999; min-height:auto; height:auto; overflow:visible; }
   .option-btn, .match-item, .step-chip{ border:1px solid #999; }
 }
+/* Memperbaiki atribut hidden agar tidak ditimpa oleh display: grid/flex */
+[hidden] {
+  display: none !important;
+}
