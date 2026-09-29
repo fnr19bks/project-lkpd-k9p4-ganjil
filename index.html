@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LKPD Game Interaktif Informatika Kelas 9 - Pemecahan Masalah Terpadu Graf & Tree - SMP Negeri 19 Kota Bekasi">
+<meta name="author" content="TIM MGMP Informatika SMP Negeri 19 Kota Bekasi">
+<title>Misi Detektif Struktur — Pemecahan Masalah Terpadu Graf &amp; Tree</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+<!-- ============================== HEADER ============================== -->
+<header class="app-header">
+  <div class="brand">
+    <span class="brand-logo">
+      <img class="logo-img" src="./logo.png" alt="Logo SMP Negeri 19 Kota Bekasi">
+      <span class="brand-logo-fallback" aria-hidden="true">G&amp;T</span>
+    </span>
+    <span class="brand-text">
+      <strong>Misi Detektif Struktur</strong>
+      <small>Pemecahan Masalah Terpadu Graf &amp; Tree</small>
+    </span>
+  </div>
+
+  <div class="header-right">
+    <div class="progress-wrap" aria-live="polite">
+      <span class="progress-label" id="progressLabel">Misi 1 dari 15</span>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+    <span class="chip chip-score" id="scoreChip">Skor (Score): 0</span>
+    <span class="chip chip-student" id="studentChip" hidden></span>
+  </div>
+</header>
+
+<!-- ============================== BODY ============================== -->
+<div class="app-body">
+
+  <nav class="app-nav" id="appNav" aria-label="Navigasi Misi">
+    <h2 class="nav-title">Daftar Misi</h2>
+    <ol class="nav-list" id="navList"></ol>
+    <div class="nav-actions">
+      <button type="button" class="btn btn-ghost btn-sm" id="btnReset">Reset (Atur Ulang)</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="btnPrintNav">Print Worksheet (Cetak LKPD)</button>
+    </div>
+  </nav>
+
+  <main class="app-main" id="main">
+    <div class="print-only" id="printHeader">
+      <h1>LKPD Informatika Kelas 9 — Pemecahan Masalah Terpadu Graf &amp; Tree</h1>
+      <p>SMP Negeri 19 Kota Bekasi · Berpikir Komputasional · Pertemuan 4 dari 16</p>
+      <p id="printStudent"></p>
+    </div>
+
+    <div id="screenRoot" class="screen-root"></div>
+
+    <footer class="app-footer">
+      LKPD Informatika Kelas 9 · Pemecahan Masalah Terpadu Graf &amp; Tree · © 2026 SMP Negeri 19 Kota Bekasi
+    </footer>
+  </main>
+
+</div>
+
+<!-- ============================== MODAL ============================== -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h2 class="modal-title" id="modalTitle">Konfirmasi</h2>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<!-- ============================== TOAST ============================== -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="./script.js" defer></script>
+</body>
+</html>
